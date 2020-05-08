@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+
+  <head>
+  	<meta charset="UTF-8">
+    <title>P3 IRAC - G30</title>
+  </head>
+  <body>
+  	<h1>Video DASH</h1>
+     <video class="dashjs-player" autoplay controls preload="auto"> <source src="./manifest.mpd" type="application/dash+xml"/>
+	 </video>
+	
+	<div>
+		<p>
+			<strong>Miembros</strong>
+			Álvaro de Pablo Marsal <br>
+			Alonso de la Hera Herrera<br>
+			Alberto López Santiago<br>
+			Álvaro López García<br>
+		</p>
+		
+	</p>
+
+	 <button onclick="alert('Que te lo has creido')">Aprobar</button>
+
+  </body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/dashjs/2.6.7/dash.all.min.js"></script> 
+<script>
+(function(){
+var url = "https://dash.akamaized.net/envivio/EnvivioDash3/manifest.mpd"; var player = dashjs.MediaPlayer().create(); player.initialize(document.querySelector(".dashjs-player"), url, true);
+    })();
+</script>
+</html>
